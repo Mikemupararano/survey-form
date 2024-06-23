@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4">Survey Form</h1>
+        <form id="surveyForm">
+            <!-- Question 1: Multiple Choice -->
+            <div class="form-group">
+                <label for="q1">What is your favorite programming language?</label>
+                <select id="q1" name="programmingLanguage" class="form-control" required>
+                    <option value="">Select...</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Question 2: Number Input -->
+            <div class="form-group">
+                <label for="q2">How many hours do you spend coding per week?</label>
+                <input type="number" id="q2" name="hoursCoding" class="form-control" min="0" max="100" required>
+            </div>
+
+            <!-- Question 3: Paragraph Input -->
+            <div class="form-group">
+                <label for="q3">Describe your favorite coding project.</label>
+                <textarea id="q3" name="favoriteProject" class="form-control" rows="4" required></textarea>
+            </div>
+
+            <!-- Question 4: Sentence Input -->
+            <div class="form-group">
+                <label for="q4">What excites you most about coding?</label>
+                <input type="text" id="q4" name="excitement" class="form-control" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <!-- Success Message (Hidden by default) -->
+        <div id="successMessage" class="alert alert-success mt-4 hidden" role="alert">
+            Thank you for completing the survey!
+        </div>
+
+        <!-- Download Link for CSV -->
+        <a id="downloadLink" class="hidden" download="survey_results.csv">Download CSV</a>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="./script/script.js"></script>
+</body>
+</html>
